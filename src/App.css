@@ -88,11 +88,15 @@ li {
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-input[type="checkbox"] + label {
+input[type="checkbox"] {
+  height: 32px;
+  width: 32px;
+}
+/* input[type="checkbox"] + label {
   display: flex;
 }
 input[type="checkbox"] {
-  display: none;
+  display: flex;
 }
 input[type="checkbox"] + label::before {
   content: "\2714";
@@ -115,7 +119,7 @@ input[type="checkbox"]:checked + label::before {
   background: rgba(255, 255, 255, 0.05);
   color: aliceblue;
   border: 1px solid rgba(255, 255, 255, 0.95);
-}
+} */
 .task--name {
   color: #ffffff;
   font-size: 18px;
