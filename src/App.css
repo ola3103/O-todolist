@@ -132,7 +132,9 @@ input[type="checkbox"] {
   border: 1px solid rgba(255, 255, 255, 0.31);
   font-size: 16px;
 }
-
+input[type="text"] {
+  font-size: 16px;
+}
 .edit--form {
   width: 80%;
   color: #ffffff;
