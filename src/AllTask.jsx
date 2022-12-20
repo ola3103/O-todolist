@@ -28,14 +28,6 @@ const AllTask = function ({ tasks, editFormData, setEditFormData, setTask }) {
     setTask(newTasks);
   };
 
-  // const handleCompleted = function (id) {
-  //   const checkComplete = tasks.map((task) =>
-  //     task.id === id ? { ...task, completed: !task.completed } : task
-  //   );
-
-  //   setTask(checkComplete);
-  // };
-
   const handleChecked = function (id) {
     const checkComplete = tasks.map((task) =>
       task.id === id ? { ...task, completed: !task.completed } : task
@@ -60,12 +52,10 @@ const AllTask = function ({ tasks, editFormData, setEditFormData, setTask }) {
             ) : (
               <>
                 <input
-                  id={task.id}
                   type="checkbox"
                   checked={task.completed}
                   onChange={() => handleChecked(task.id)}
                 />
-                <label htmlFor={task.id}></label>
                 <p
                   className="task--name"
                   style={{
