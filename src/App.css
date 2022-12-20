@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+body {
+  font-family: "Prompt", sans-serif;
+}
+li {
+  list-style: none;
+}
+#root {
+  padding: 5rem 3rem;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(#111112 1px, transparent 1px),
+    linear-gradient(to right, #111112 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-color: #030303;
+  height: 100vh;
+}
+.App {
+  padding: 2rem 1rem;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.31);
+  width: 1024px;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.addForm--box {
+  margin: 0 0 24px 0;
+  display: flex;
+}
+.add--form {
+  background: transparent;
+  color: aliceblue;
+  padding: 8px 4px;
+  font-size: 16px;
+  outline: 1px solid rgba(255, 255, 255, 0.31);
+  margin: 0 16px 0 0;
+  width: 100%;
+}
+.add--btn {
+  color: #ffffff;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.31);
+  width: 40%;
+}
+.add--btn:hover {
+  box-shadow: 1px 4px 12px rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+}
+.single--task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 24px 0;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+input[type="checkbox"] + label {
+  display: flex;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label::before {
+  content: "\2714";
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.35);
+  color: transparent;
+  border: 1px solid aliceblue;
+  border-radius: 4px;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  padding: 0 0 8px 4px;
+  vertical-align: bottom;
+  transition: 0.2s;
+}
+input[type="checkbox"] + label:active::before {
+  transform: scale(0);
+}
+input[type="checkbox"]:checked + label::before {
+  background: rgba(255, 255, 255, 0.05);
+  color: aliceblue;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+}
+.task--name {
+  color: #ffffff;
+  font-size: 18px;
+  word-wrap: break-word;
+  width: 768px;
+  padding: 0 0 0 24px;
+  text-align: left;
+  font-weight: 300;
+}
+.btn--box {
+  margin: 0 0 0 auto;
+}
+.edit--btn {
+  color: #ffffff;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.31);
+  font-size: 16px;
+  margin: 0 12px 0 0;
+}
+.delete--btn {
+  color: #ffffff;
+  padding: 8px 12px;
+  background: rgba(242, 23, 7, 0.4);
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.31);
+  font-size: 16px;
+}
+.update--btn {
+  color: #ffffff;
+  padding: 8px 12px;
+  background: rgba(70, 7, 242, 0.1);
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.31);
+  font-size: 16px;
+}
+
+.edit--form {
+  width: 80%;
+  color: #ffffff;
+  padding: 8px 4px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.31);
+}
+
+@media (max-width: 1058px) {
+  .App {
+    padding: 2rem 1rem;
+    width: 768px;
+  }
+  .task--name {
+    font-size: 18px;
+    max-width: 480px;
+  }
+}
+@media (max-width: 826px) {
+  #root {
+    padding: 5rem 0.5rem;
+  }
+  .App {
+    padding: 2rem 0.5rem;
+    width: 576px;
+  }
+  .task--name {
+    font-size: 16px;
+    max-width: 320px;
+    padding: 0 0 0 12px;
+  }
+}
+@media (max-width: 566px) {
+  .add--btn {
+    padding: 6px 8px;
+  }
+  #root {
+    padding: 5rem 0.5rem;
+  }
+  .App {
+    padding: 2rem 0.5rem;
+    width: 450px;
+  }
+  .task--name {
+    font-size: 16px;
+    max-width: 280px;
+    padding: 0 0 0 12px;
+  }
+  .edit--btn {
+    padding: 6px 8px;
+    font-size: 16px;
+    margin: 0 0 6px 0;
+    width: 100%;
+  }
+  .delete--btn {
+    padding: 6px 8px;
+    font-size: 16px;
+    margin: 4px 0 0 0;
+    width: 100%;
+  }
+}
+@media (max-width: 454px) {
+  .add--btn {
+    padding: 6px 8px;
+  }
+  #root {
+    padding: 5rem 0.5rem;
+  }
+  .App {
+    padding: 2rem 0.5rem;
+    width: 315px;
+  }
+  .addForm--box {
+    flex-wrap: wrap;
+    margin: 0 0 48px;
+  }
+  .add--btn {
+    width: 95%;
+    margin: 12px 0 0 0;
+  }
+  .add--form {
+    width: 100%;
+  }
+  .single--task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 24px 0;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 1rem 0.5rem;
+  }
+  .task--name {
+    max-width: 230px;
+  }
+  .btn--box {
+    display: flex;
+    width: 100%;
+    margin: 8px 0 0 0;
+  }
+  .edit--btn {
+    padding: 6px 8px;
+    font-size: 16px;
+    margin: 0 8px 0 0;
+    width: 50%;
+  }
+  .delete--btn {
+    padding: 6px 8px;
+    font-size: 16px;
+    margin: 0 0 0 8px;
+    width: 50%;
+  }
+  .edit--form {
+    width: 100%;
+    margin: 0 0 8px 0;
+  }
+  .update--btn {
+    width: 100%;
+  }
+}
