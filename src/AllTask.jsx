@@ -5,7 +5,6 @@ const AllTask = function ({ tasks, editFormData, setEditFormData, setTask }) {
   const [watchId, setWatchId] = useState(null);
   const [checkBoxData, setCheckBoxData] = useState(false);
   const handleEdit = function (t) {
-    console.log(t.taskName);
     setWatchId(t.id);
     setEditFormData(t.taskName);
   };
@@ -34,8 +33,6 @@ const AllTask = function ({ tasks, editFormData, setEditFormData, setTask }) {
 
     setTask(checkComplete);
   };
-
-  console.log(tasks);
 
   return (
     <ul>

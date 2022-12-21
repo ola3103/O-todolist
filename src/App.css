@@ -255,14 +255,13 @@ input[type="text"] {
   }
   .edit-form--box {
     width: 100%;
+    flex-wrap: wrap;
   }
   .edit--form {
     width: 100%;
     margin: 0 0 8px 0;
-    display: block;
   }
   .update--btn {
     width: 100%;
-    display: block;
   }
 }
