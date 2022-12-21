@@ -198,12 +198,12 @@ input[type="text"] {
     padding: 90px 8px;
   }
   .App {
-    padding: 96px 8px;
+    padding: 72px 8px;
     width: 315px;
   }
   .addForm--box {
     flex-wrap: wrap;
-    margin: 0 0 48px 0;
+    margin: 0 0 40px 0;
     justify-content: center;
   }
   .add--btn {
@@ -245,11 +245,16 @@ input[type="text"] {
     color: #fa1f02;
     padding: 8px 1.5px 0 1.5px;
   }
+  .edit-form--box {
+    width: 100%;
+  }
   .edit--form {
     width: 100%;
     margin: 0 0 8px 0;
+    display: block;
   }
   .update--btn {
     width: 100%;
+    display: block;
   }
 }
