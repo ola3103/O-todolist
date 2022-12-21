@@ -12,7 +12,7 @@ li {
   list-style: none;
 }
 #root {
-  padding: 5rem 3rem;
+  padding: 80px 48px;
   display: flex;
   justify-content: center;
   background-image: linear-gradient(#111112 1px, transparent 1px),
@@ -22,7 +22,7 @@ li {
   height: 100vh;
 }
 .App {
-  padding: 2rem 1rem;
+  padding: 96px 24px;
   background: rgba(255, 255, 255, 0.07);
   box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
@@ -81,7 +81,7 @@ li {
   align-items: center;
   margin: 0 0 24px 0;
   width: 100%;
-  padding: 1rem 0.5rem;
+  padding: 16px 8px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
@@ -148,7 +148,7 @@ input[type="text"] {
 
 @media (max-width: 1058px) {
   .App {
-    padding: 2rem 1rem;
+    padding: 16px 8px;
     width: 768px;
   }
   .task--name {
@@ -158,10 +158,10 @@ input[type="text"] {
 }
 @media (max-width: 826px) {
   #root {
-    padding: 5rem 0.5rem;
+    padding: 90px 8px;
   }
   .App {
-    padding: 2rem 0.5rem;
+    padding: 96px 8px;
     width: 576px;
   }
   .task--name {
@@ -175,17 +175,16 @@ input[type="text"] {
     padding: 6px 8px;
   }
   #root {
-    padding: 5rem 0.5rem;
+    padding: 90px 8px;
   }
   .App {
-    padding: 2rem 0.5rem;
+    padding: 96px 8px;
     width: 450px;
   }
   .task--name {
     font-size: 16px;
     max-width: 280px;
     padding: 0 0 0 12px;
-    background: #fa1f02;
   }
   .btn--box {
     display: flex;
@@ -196,15 +195,16 @@ input[type="text"] {
     padding: 6px 8px;
   }
   #root {
-    padding: 5rem 0.5rem;
+    padding: 90px 8px;
   }
   .App {
-    padding: 2rem 0.5rem;
+    padding: 96px 8px;
     width: 315px;
   }
   .addForm--box {
     flex-wrap: wrap;
-    margin: 0 0 48px;
+    margin: 0 0 48px 0;
+    justify-content: center;
   }
   .add--btn {
     width: 95%;
@@ -220,7 +220,7 @@ input[type="text"] {
     align-items: center;
     margin: 0 0 24px 0;
     width: 100%;
-    padding: 1rem 0.5rem;
+    padding: 16px 8px;
   }
   .task--name {
     max-width: 200px;
