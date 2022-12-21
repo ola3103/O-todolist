@@ -137,13 +137,21 @@ input[type="checkbox"] {
 input[type="text"] {
   font-size: 16px;
 }
+.edit-form--box {
+  width: 100%;
+  display: flex;
+}
 .edit--form {
   width: 80%;
-  color: #ffffff;
+  background: transparent;
+  color: aliceblue;
   padding: 8px 4px;
-  background: rgba(255, 255, 255, 0.07);
-  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.31);
+  font-size: 16px;
+  outline: 1px solid rgba(255, 255, 255, 0.31);
+  margin: 0 16px 0 0;
+}
+.update--btn {
+  width: 20%;
 }
 
 @media (max-width: 1058px) {

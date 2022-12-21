@@ -18,7 +18,6 @@ const AllTask = function ({ tasks, editFormData, setEditFormData, setTask }) {
     const newUpdatedTasks = tasks.map((task) =>
       task.id === updateTask.id ? { ...task, ...updateTask } : task
     );
-
     setTask(newUpdatedTasks);
     setWatchId(null);
   };
@@ -59,9 +58,7 @@ const AllTask = function ({ tasks, editFormData, setEditFormData, setTask }) {
                 <p
                   className="task--name"
                   style={{
-                    textDecoration: task.completed
-                      ? "line-through solid 2.5px"
-                      : "",
+                    textDecoration: task.completed ? "line-through" : "",
                   }}
                 >
                   {task.taskName}
