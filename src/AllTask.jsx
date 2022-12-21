@@ -59,7 +59,9 @@ const AllTask = function ({ tasks, editFormData, setEditFormData, setTask }) {
                 <p
                   className="task--name"
                   style={{
-                    textDecoration: task.completed ? "line-through" : "",
+                    textDecoration: task.completed
+                      ? "line-through solid 2.5px"
+                      : "",
                   }}
                 >
                   {task.taskName}
@@ -70,13 +72,17 @@ const AllTask = function ({ tasks, editFormData, setEditFormData, setTask }) {
                     onClick={() => handleEdit(task)}
                     className="edit--btn"
                   >
-                    Edit
+                    <span>
+                      <i className="bx bx-edit"></i>
+                    </span>
                   </button>
                   <button
                     onClick={() => handleDelete(task.id)}
                     className="delete--btn"
                   >
-                    Delete
+                    <span>
+                      <i className="bx bx-trash"></i>
+                    </span>
                   </button>
                 </div>
               </>
